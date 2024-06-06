@@ -29,11 +29,13 @@ https://studio.edgeimpulse.com/studio/397181
 
 아두이노 ZIP 파일: [ei-ncc-project-1-arduino-1.0.1.zip](https://github.com/user-attachments/files/15619049/ei-ncc-project-1-arduino-1.0.1.zip)
 
+[Uploading nano_ble33_sense_microphone.ino…]()
 
 아두이노 IDE 설정
 --------------------------------------------------
 해당 프로젝트에 사용되는 보드는 arduino nano 33 ble nano sense 이며 보드 내에 센서가 내장되어 보드가 외부 신호를 인식할 수 있습니다.
 
+아두이노:
 <img width="960" alt="20240606_213147" src="https://github.com/ohjaeeun/BME-capstone/assets/171842597/cd432d08-5763-4748-94b6-9c6149dd0cf1">
 
 
