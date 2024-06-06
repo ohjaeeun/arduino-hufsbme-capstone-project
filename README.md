@@ -33,11 +33,14 @@ https://studio.edgeimpulse.com/studio/397181
 
 아두이노 IDE Setup
 --------------------------------------------------
-해당 프로젝트에 사용되는 보드는 arduino nano 33 ble nano sense 이며 보드 내에 센서가 내장되어 보드가 외부 신호를 인식할 수 있습니다.
+ 해당 프로젝트에 사용되는 보드는 arduino nano 33 ble nano sense 이며 보드 내에 센서가 내장되어 보드가 외부 신호를 인식할 수 있습니다.
 먼저 아두이노 IDE를 다운로드하여 설치하고 사용할 라이브러리를 추가합니다.
 스케치 > 라이브러리 포함 > 라이브러리 관리로 이동하여 라이브러리를 추가할 수 있습니다.
-(모델이 저장된 아두이노 라이브러리 : 아두이노 ZIP 파일: [ei-ncc-project-1-arduino-1.0.1.zip])
 
+(모델이 저장된 아두이노 라이브러리 :[ei-ncc-project-1-arduino-1.0.1.zip](https://github.com/user-attachments/files/15621906/ei-ncc-project-1-arduino-1.0.1.zip)
+ )
+
+이후에는 해당 라이브러리를 활용하여 
 아두이노:
 <img width="960" alt="20240606_213147" src="https://github.com/ohjaeeun/BME-capstone/assets/171842597/cd432d08-5763-4748-94b6-9c6149dd0cf1">
 
