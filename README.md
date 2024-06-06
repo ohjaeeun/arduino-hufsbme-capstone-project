@@ -31,6 +31,7 @@ Edge Impulse
 
 아두이노 도식도
 --------------------------------------------------
+<img width="260" alt="아두이도 도식도" src="https://github.com/ohjaeeun/BME-capstone/assets/171842597/d84fd103-15cd-449e-8550-0b61560ca641">
 
 
 
