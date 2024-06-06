@@ -40,10 +40,12 @@ https://studio.edgeimpulse.com/studio/397181
 (모델이 저장된 아두이노 라이브러리 :[ei-ncc-project-1-arduino-1.0.1.zip](https://github.com/user-attachments/files/15621906/ei-ncc-project-1-arduino-1.0.1.zip)
  )
 
-이후에는 해당 라이브러리를 활용하여 
-아두이노:
+이후에는 해당 라이브러리를 활용하여 특정 소리를 인식하고 이를 진동 모터의 인식으로 출력하는 코드를 작성합니다. arduino nano 33 ble sense의 특성상 컴파일 속도가 느릴 수 있습니다.
+
+microphone moter code:
 <img width="960" alt="20240606_213147" src="https://github.com/ohjaeeun/BME-capstone/assets/171842597/cd432d08-5763-4748-94b6-9c6149dd0cf1">
 
+해당 코드로 컴파일 완료 후 특정 소리에 따라 진동모터가 인식되는지 확인할 수 있습니다.
 
 아두이노 도식도
 --------------------------------------------------
