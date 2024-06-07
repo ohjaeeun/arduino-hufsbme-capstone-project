@@ -122,7 +122,7 @@ void loop()
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
 
         // Check if the detected label is "horn" (change "horn" to your actual label)
-        if (strcmp(result.classification[ix].label, "horn") == 0 && result.classification[ix].value > 0.8) {
+        if ((strcmp(result.classification[ix].label, "Car Horn Sound") == 0 && result.classification[ix].value > 0.7) || (strcmp(result.classification[ix].label, "Horn Sound") == 0 && result.classification[ix].value > 0.7)) {
             horn_detected = true;
         }
     }
@@ -133,7 +133,7 @@ void loop()
     // Control the motor based on horn detection
     if (horn_detected) {
         digitalWrite(motorPin, HIGH);  // Turn on the motor
-        delay(1000);                   // Run the motor for 1 second
+        delay(2000);                   // Run the motor for 1 second
         digitalWrite(motorPin, LOW);   // Turn off the motor
     }
 }
