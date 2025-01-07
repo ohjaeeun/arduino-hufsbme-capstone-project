@@ -30,7 +30,7 @@ Edge Impulse
 >
 >* https://studio.edgeimpulse.com/studio/397181
 >
->* 아두이노 ZIP 파일: [ei-ncc-project-1-arduino-1.0.1.zip](https://github.com/user-attachments/files/15619049/ei-ncc-project-1-arduino-1.0.1.zip)
+>* 아두이노 ZIP 파일: [libraries.zip](https://github.com/user-attachments/files/18330179/libraries.zip)
 >
 >* [Uploading nano_ble33_sense_microphone.ino…]()
 
@@ -40,7 +40,7 @@ Edge Impulse
 >먼저 아두이노 IDE를 다운로드하여 설치하고 사용할 라이브러리를 추가합니다.
 >스케치 > 라이브러리 포함 > 라이브러리 관리로 이동하여 라이브러리를 추가할 수 있습니다.
 >
->* 모델이 저장된 아두이노 라이브러리 :[ei-ncc-project-1-arduino-1.0.1.zip](https://github.com/user-attachments/files/15621906/ei-ncc-project-1-arduino-1.0.1.zip)
+>* 모델이 저장된 아두이노 라이브러리 :[libraries.zip](https://github.com/user-attachments/files/18330215/libraries.zip)
 >
 >
 >이후에는 해당 라이브러리를 활용하여 특정 소리를 인식하고 이를 진동 모터의 인식으로 출력하는 코드를 작성합니다. arduino nano 33 ble sense의 특성상 컴파일 속도가 느릴 수 있습니다.
