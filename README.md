@@ -32,7 +32,8 @@ Edge Impulse
 >
 >* 아두이노 ZIP 파일: [libraries.zip](https://github.com/user-attachments/files/18330179/libraries.zip)
 >
->* [Uploading nano_ble33_sense_microphone.ino…]()
+
+
 
 아두이노 IDE Setup
 --------------------------------------------------
