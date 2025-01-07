@@ -34,7 +34,7 @@
 
 /* Includes ---------------------------------------------------------------- */
 #include <PDM.h>
-#include <ncc-project-1_inferencing.h>
+#include <Project_inferencing.h>
 
 /** Audio buffers, pointers and selectors */
 typedef struct {
@@ -48,7 +48,14 @@ static inference_t inference;
 static signed short sampleBuffer[2048];
 static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 
-// Define pin for vibration motor
+// 함수 프로토타입 선언 추가
+static bool microphone_inference_start(uint32_t n_samples);
+static bool microphone_inference_record(void);
+static int microphone_audio_signal_get_data(size_t offset, size_t length, float *out_ptr);
+static void microphone_inference_end(void);
+
+
+// Motor pin define
 const int motorPin = 4;
 
 /**
@@ -62,9 +69,9 @@ void setup()
     while (!Serial);
     Serial.println("Edge Impulse Inferencing Demo");
 
-    // Set motorPin as output
+    // set motorPin as output
     pinMode(motorPin, OUTPUT);
-    digitalWrite(motorPin, LOW); // Ensure motor is off at the start
+    digitalWrite(motorPin, LOW);
 
     // summary of inferencing settings (from model_metadata.h)
     ei_printf("Inferencing settings:\n");
@@ -115,28 +122,28 @@ void loop()
         result.timing.dsp, result.timing.classification, result.timing.anomaly);
     ei_printf(": \n");
 
-    // Variable to check if horn sound is detected
     bool horn_detected = false;
 
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
 
-        // Check if the detected label is "horn" (change "horn" to your actual label)
-        if ((strcmp(result.classification[ix].label, "Car Horn Sound") == 0 && result.classification[ix].value > 0.7) || (strcmp(result.classification[ix].label, "Horn Sound") == 0 && result.classification[ix].value > 0.7)) {
-            horn_detected = true;
-        }
+         if (((strcmp(result.classification[ix].label, "Car") == 0) && (result.classification[ix].value > 0.7)) ||
+         ((strcmp(result.classification[ix].label, "Siren") == 0) && (result.classification[ix].value > 0.7))) {
+          horn_detected = true;
+          }
     }
-#if EI_CLASSIFIER_HAS_ANOMALY == 1
-    ei_printf("    anomaly score: %.3f\n", result.anomaly);
-#endif
-
-    // Control the motor based on horn detection
+//#if EI_CLASSIFIER_HAS_ANOMALY == 1
+//    ei_printf("    anomaly score: %.3f\n", result.anomaly);
+//#endif
+// Control 
     if (horn_detected) {
-        digitalWrite(motorPin, HIGH);  // Turn on the motor
-        delay(2000);                   // Run the motor for 1 second
-        digitalWrite(motorPin, LOW);   // Turn off the motor
+      digitalWrite(motorPin, HIGH);
+      delay(1000);
+      digitalWrite(motorPin, LOW);
     }
+        //print_results = 0;
 }
+
 
 /**
  * @brief      PDM buffer full callback
