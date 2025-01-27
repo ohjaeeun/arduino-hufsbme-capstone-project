@@ -28,7 +28,6 @@ Edge Impulse
 >저희가 프로젝트에 활용한 머신러닝 플랫폼인 Edge Impulse는 TinyML 기반의 클라우드 플랫폼입니다. 
 >신경망 등 다양한 알고리즘을 선택하여 음성을 비롯한 이미지 등의 학습에 사용됩니다. TinyML은 임베디드 하드웨어의 낮은 성능과 저전력 마이크로컨트롤러에서 ML을 구현할 수 있도록 지원하는 기술입니다.
 >
->* https://studio.edgeimpulse.com/studio/397181
 >
 >* 아두이노 ZIP 파일: [libraries.zip](https://github.com/user-attachments/files/18330179/libraries.zip)
 >
